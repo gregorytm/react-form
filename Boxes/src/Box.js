@@ -6,7 +6,7 @@ function Box({ id, color = "green", width = 5, height = 5, handleRemove }) {
         style={{
           height: `${height}em`,
           width: `${width}em`,
-          color,
+          backgroundColor: color,
         }}
       />
       <button onClick={remove}>Delete</button>
