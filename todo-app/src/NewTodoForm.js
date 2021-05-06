@@ -2,15 +2,14 @@ import React, { useState } from "react";
 
 const NewTodoForm = ({ addTodo }) => {
   const INITAL_STATE = {
-    Todo: "",
+    todo: "",
   };
   const [formData, setFormData] = useState(INITAL_STATE);
+  console.log(formData);
   const handleChange = (e) => {
-    const { todo, value } = e.target;
-    setFormData((formData) => ({
-      ...formData,
-      [todo]: value,
-    }));
+    console.log(e);
+    const todo = e.target.value;
+    setFormData({ todo });
   };
 
   const handleSubmit = (e) => {
@@ -27,7 +26,7 @@ const NewTodoForm = ({ addTodo }) => {
         type="text"
         name="name"
         placeholder="Todo"
-        value={formData.name}
+        value={formData.todo}
         onChange={handleChange}
       />
       <button>Add Todo</button>

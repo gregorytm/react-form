@@ -5,8 +5,8 @@ import NewTodoForm from "./NewTodoForm";
 
 const TodoList = () => {
   const INITAL_STATE = [
-    { id: uuid(), Todo: "Mow the grass" },
-    { id: uuid(), Todo: "Feed the chickens" },
+    { id: uuid(), todo: "Mow the grass" },
+    { id: uuid(), todo: "Feed the chickens" },
   ];
   const [todos, setTodo] = useState(INITAL_STATE);
   const addTodo = (newTodo) => {
